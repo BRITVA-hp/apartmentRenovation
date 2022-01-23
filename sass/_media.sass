@@ -1,4 +1,61 @@
+@media screen and ( max-width: 1400px )
+    .main
+        &__container
+            background-position-x: 135%
+
+@media screen and ( max-width: 1200px )
+    .main
+        &__title
+            font-size: 40px
+        &__subtitle
+            font-size: 27px
+        &__container
+            padding-top: 40px
+            padding-bottom: 40px
+            background: url(../img/main/bg1200.png) no-repeat 120% center
+
 @media screen and ( max-width: 991px )
+    .main
+        &__button
+            width: 240px
+        &__container
+            background: url(../img/main/bg991.png) no-repeat calc( 100% + 80px ) center
+        &__box
+            max-width: 440px
+        &__item
+            width: 195px
+            &__img
+                margin-right: 11px
+                width: 50px
+                height: 50px
+                &--1
+                    background-image: url(../img/main/img1M.png)
+                &--2
+                    background-image: url(../img/main/img2M.png)
+            &__text
+                font-size: 14px
+        &__elem
+            transform: translateX(-40px)
+            margin-bottom: 35px
+            align-items: center
+            &__text
+                font-size: 18px
+                padding-bottom: 0
+            &__marker
+                width: 70px
+                &__line
+                    height: 29px
+                &__img
+                    width: 31px
+                    height: 31px
+                    background-image: url(../img/main/markerM.png)
+        &__title
+            font-size: 30px
+            margin-bottom: 10px
+        &__subtitle
+            font-size: 18px
+            margin-bottom: 18px
+
     .header
         padding-top: 0    
         padding-bottom: 0
@@ -20,3 +77,31 @@
                 font-size: 10px
         &__box
             display: none
+
+    .button
+        font-size: 16px
+        padding: 18px 0
+
+@media screen and ( max-width: 767px )
+    .main
+        background-color: #ffffff
+        &__footer
+            display: none
+        &__info
+            flex-direction: column
+            align-items: flex-start
+        &__item
+            margin-right: 0
+            margin-bottom: 22px
+        &__title
+            text-align: center
+            max-width: 305px
+            margin-left: auto
+            margin-right: auto
+        &__subtitle
+            text-align: center
+        &__container
+            max-width: 400px
+            padding-top: 45px
+            padding-bottom: 36px
+            background: url(../img/main/bgM.png) no-repeat right bottom
