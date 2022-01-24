@@ -83,9 +83,88 @@
             </div>
 
         </section>
-        <!-- /.section -->
+        <!-- /.section main -->
+
+        <section class="section price">
+
+            <div class="container price__container">
+                <form action="#" class="price__box">
+                    <h3 class="section__title price__title">Получите <span>стоимость ремонта</span> с материалами и скидкой</h3>
+
+                    <div class="price__types row">
+                        <div class="price__types__box">
+                            <p class="price__types__title">Тип объекта:</p>
+                            <div class="price__list">
+                                <label class="price__list__label">
+                                    <input class="price__list__radio" name="obj" type="radio">
+                                    <span class="price__list__text">Вторичка</span>
+                                </label>
+                                <label class="price__list__label">
+                                    <input checked class="price__list__radio" name="obj" type="radio">
+                                    <span class="price__list__text">Новостройка</span>
+                                </label>
+                                <label class="price__list__label">
+                                    <input class="price__list__radio" name="obj" type="radio">
+                                    <span class="price__list__text">Офисное помещение</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="price__types__box">
+                            <p class="price__types__title">Тип ремонта:</p>
+                            <div class="price__list">
+                                <label class="price__list__label">
+                                    <input class="price__list__radio" name="repair" type="radio">
+                                    <span class="price__list__text">Косметический</span>
+                                </label>
+                                <label class="price__list__label">
+                                    <input checked class="price__list__radio" name="repair" type="radio">
+                                    <span class="price__list__text">Капитальный</span>
+                                </label>
+                                <label class="price__list__label">
+                                    <input class="price__list__radio" name="repair" type="radio">
+                                    <span class="price__list__text">Евроремонт</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="price__area row">
+                        <p class="price__area__title">Площадь квартиры (м²):</p>
+                        
+                        <div class="price__range">
+                            <div class="price__range__wrap">
+                                <div class="price__range__box">
+                                    <span class="price__range__track">
+                                        <span class="price__range__track__value">38</span>
+                                    </span>
+                                </div>
+                                <input class="price__range__input" type="range" min="10" max="250" value="38" step="1">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row price__data">
+                        <div class="price__input-group">
+                            <label for="priceName" class="price__label">Ваше имя</label>
+                            <input id="priceName" placeholder="Имя" type="text" class="price__input">
+                        </div>
+                        <div class="price__input-group">
+                            <label for="priceTel" class="price__label">Телефон</label>
+                            <input id="priceTel" placeholder="+7 (___) ___ - __ - __" type="tel" class="price__input">
+                        </div>
+                    </div>
+
+                    <button class="button price__button">Оставить заявку</button>
+
+                    <p class="price__footer">Нажимая кнопку, вы даете согласие на обработку персональных данных</p>
+                </form>
+            </div>
+
+        </section>
+        <!-- /.section price -->
 
     </main>
     
+    <script src="js/script.js"></script>
 </body>
 </html>
