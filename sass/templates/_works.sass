@@ -1,0 +1,136 @@
+.works
+    padding-top: 90px
+    background-color: #ffffff
+    &__window
+        overflow: hidden
+    &__interface
+        margin-bottom: 40px
+        padding-left: 20px
+        padding-right: 20px
+    &__button
+        width: 365px
+    &__star
+        display: flex
+        align-items: center
+        margin-bottom: 50px
+        img
+            margin-right: 20px
+    &__icons
+        display: flex
+        flex-wrap: wrap
+        max-width: 500px
+        &__card
+            width: 220px
+            display: flex
+            align-items: center
+            margin-bottom: 33px
+            img
+                margin-right: 20px
+    &__box
+        align-items: flex-start
+        justify-content: flex-start
+        display: none
+        &--mobile
+            display: block
+            margin-right: 20px
+            &:last-child
+                margin-right: 0
+    &__content
+        .active
+            display: flex
+            animation-name: blink
+            animation-duration: 0.3s
+        &--mobile
+            display: none
+        &__field
+            display: flex
+            transition: 0.3s
+    &__ul
+        list-style-type: none
+        margin-bottom: 40px
+        img
+            margin-right: 20px
+    &__li
+        margin-bottom: 20px
+        &:last-child
+            margin-bottom: 0
+    &__title
+        margin-bottom: 50px
+    &__types
+        margin-bottom: 75px
+        flex-wrap: wrap
+        justify-content: center
+        &__item
+            width: 285px
+            height: 60px
+            font-family: 'Montserrat', sans-serif
+            font-style: normal
+            font-weight: 500
+            font-size: 20px
+            line-height: 24px
+            border: 2px solid #E0E0E0
+            border-radius: 5px
+            display: flex
+            align-items: center
+            justify-content: center
+            cursor: pointer
+            transition: 0.3
+            margin: 11px
+            &:first-child
+                margin-left: 0
+            &:last-child
+                margin-right: 0
+            &--mobile
+                background-color: #FFDB48
+                border: 2px solid #FFDB48
+                margin: 0 !important
+        & .active
+            background-color: #FFDB48
+            border: 2px solid #FFDB48
+    &__slider
+        margin-right: 120px
+        &__row
+            margin-bottom: 10px
+        &__img
+            display: flex
+            align-items: center
+            justify-content: center
+            margin-bottom: 10px
+            width: 622px
+            height: 410px
+            overflow: hidden
+            border-radius: 5px
+            &--min
+                display: flex
+                align-items: center
+                justify-content: center
+                width: 200px
+                height: 132px
+                overflow: hidden
+                cursor: pointer
+                border-radius: 5px
+        &__buttons
+            display: flex
+        &__button
+            width: 40px
+            height: 40px
+            border: 1px solid #E0E0E0
+            display: flex
+            align-items: center
+            justify-content: center
+            cursor: pointer
+            transition: 0.3s
+            &:hover
+                background-color: #E0E0E0
+            &--prev
+                margin-right: 5px
+            &--inactive
+                background-color: transparent !important
+
+@keyframes blink
+    0%
+        opacity: 0
+        
+    100%
+        opacity: 1
+        

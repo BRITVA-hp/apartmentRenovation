@@ -1,4 +1,8 @@
 @media screen and ( max-width: 1400px )
+    .works
+        &__slider
+            margin-right: 60px
+
     .price
         &__container
             padding: 40px
@@ -9,6 +13,16 @@
             background-position-x: 135%
 
 @media screen and ( max-width: 1200px )
+    .works
+        &__slider
+            margin-right: 30px
+            &__img
+                width: 477px
+                height: 313px
+                &--min
+                    width: 152px
+                    height: 100px
+    
     .price
         &__range
             width: 400px
@@ -29,7 +43,57 @@
             background: url(../img/main/bg1200.png) no-repeat 120% center
 
 @media screen and ( max-width: 991px )
+    .works
+        padding-top: 40px
+        padding-bottom: 40px
+        &__button
+            width: 100%
+            max-width: 335px
+        &__star
+            font-size: 16px
+            margin-bottom: 30px
+            img
+                margin-right: 10px
+        &__icons
+            max-width: 390px
+            margin-bottom: 10px
+            img
+                width: 20px
+                margin-right: 10px
+            &__card
+                font-size: 16px
+                width: 166px
+                margin-bottom: 20px
+        &__ul
+            font-size: 16px
+            margin-bottom: 30px
+        &__li
+            margin-bottom: 10px
+            position: relative
+            padding-left: 30px
+            img
+                position: absolute
+                left: 0
+                top: 0
+        &__slider
+            &__img
+                width: 345px
+                height: 228px
+                &--min
+                    width: 108px
+                    height: 70px
+        &__types
+            margin-bottom: 30px
+            &__item
+                font-size: 16px
+                width: 165px
+                height: 55px
+                margin: 5px
+        &__title
+            margin-bottom: 20px
+
     .price
+        padding-bottom: 40px
         &__title
             max-width: 390px
         &__box
@@ -143,8 +207,36 @@
             font-size: 23px
 
 @media screen and ( max-width: 767px )
+    .works
+        padding: 30px 0
+        &__types
+            display: none
+        &__title
+            padding-left: 20px
+            padding-right: 20px
+        &__slider
+            margin-right: 0
+            &__img
+                width: 280px
+                height: 180px
+                &--min
+                    width: 86px
+                    height: 55px
+            &__button
+                width: 55px
+                height: 55px
+                background-color: #E0E0E0
+        &__content
+            display: none !important
+            &--mobile
+                display: block
+            &__field
+                padding-left: 20px
+                padding-right: 20px
+
     .price
         padding: 0
+        padding-bottom: 30px
         &__data
             flex-direction: column
         &__input-group
