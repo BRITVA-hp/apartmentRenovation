@@ -193,7 +193,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     });
                 }
                 field_.style.transform = `translateX(-${(cardWidth + margin) * sliderCounter}px)`;
-                slideName ();
+                if (sliderName_) {
+                    slideName ();
+                }
             }
     
             // Слайд предыдущий
@@ -217,7 +219,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     });
                 }
                 field_.style.transform = `translateX(-${(cardWidth + margin) * sliderCounter}px)`;
-                slideName ();
+                if (sliderName_) {
+                    slideName ();
+                }
             }
     
             // Рендер точек
@@ -303,6 +307,45 @@ document.addEventListener('DOMContentLoaded', () => {
             'works__slider__button--inactive',
             '[data-worksSliderName]',
             '[data-worksSliderSlideName]'
+        );
+        slider(
+            '.team__window--big',
+            '.team__field--big',
+            '.team__slide--big',
+            1520,
+            20,
+            false,
+            false,
+            false,
+            '.team__button--prev--big',
+            '.team__button--next--big',
+            'inactive',
+        );
+        slider(
+            '.team__window--medium',
+            '.team__field--medium',
+            '.team__slide--medium',
+            752,
+            20,
+            false,
+            false,
+            false,
+            '.team__button--prev--medium',
+            '.team__button--next--medium',
+            'inactive',
+        );
+        slider(
+            '.team__window--small',
+            '.team__field--small',
+            '.team__card-small',
+            280,
+            20,
+            false,
+            false,
+            false,
+            '.team__button--prev--small',
+            '.team__button--next--small',
+            'inactive',
         );
 
 });
