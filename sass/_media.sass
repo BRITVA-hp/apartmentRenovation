@@ -91,6 +91,8 @@
         padding-top: 50px
         padding-bottom: 50px
         &__window
+            &--small
+                display: block
             &--medium
                 display: none
         &__title
@@ -323,6 +325,32 @@
             font-size: 23px
 
 @media screen and ( max-width: 767px )
+    .scheme
+        padding-top: 50px
+        padding-bottom: 14px
+        &__title
+            margin-bottom: 44px
+        &__number
+            width: 75px
+            height: 75px
+            font-size: 48px
+            margin-bottom: 20px
+        &__text
+            margin-bottom: 22px
+            font-size: 16px
+        &__content
+            transform: translateY(-37.5px)
+        &__logo
+            width: 30px
+            height: 30px
+            img
+                width: 14px
+        &__card
+            width: 130px
+            height: 170px
+            margin: 0
+            margin: 36px 5px
+
     .quiz
         &__last
             max-width: 400px
@@ -442,6 +470,20 @@
             background: url(../img/main/bgM.png) no-repeat right bottom
 
 @media screen and ( max-width: 575px )
+    .scheme
+        padding-bottom: 50px
+        &__title
+            margin-bottom: 80px
+        &__card
+            margin: 0
+        &__row
+            display: grid
+            grid-template-columns: 130px 130px
+            grid-template-rows: repeat(5, 1fr)
+            justify-content: center
+            grid-column-gap: 10px
+            grid-row-gap: 73px
+
     .team
         &__interface
             flex-direction: column
