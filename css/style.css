@@ -1191,6 +1191,8 @@ body {
 .team__buttons {
   display: flex;
   border: 1px solid #E0E0E0; }
+  .team__buttons--small {
+    display: none; }
   .team__buttons--medium {
     display: none; }
   .team__buttons .inactive {
@@ -1226,7 +1228,8 @@ body {
     background-color: #ffffff;
     border: 1px solid #FFDB48;
     border-radius: 5px;
-    margin: 58px 10px 58px 10px; }
+    margin: 58px 10px 58px 10px;
+    position: relative; }
   .scheme__content {
     display: flex;
     flex-direction: column;
@@ -1247,7 +1250,6 @@ body {
     color: #FFFFFF;
     margin-bottom: 55px; }
   .scheme__text {
-    margin-bottom: 39px;
     max-width: 180px;
     text-align: center; }
   .scheme__logo {
@@ -1257,7 +1259,11 @@ body {
     border-radius: 50%;
     display: flex;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    bottom: 35px;
+    transform: translate(-50%); }
 
 .modal {
   visibility: hidden;
@@ -1284,7 +1290,8 @@ body {
     padding-right: 0; }
     .team__title {
       padding-left: 20px;
-      padding-right: 20px; }
+      padding-right: 20px;
+      max-width: 930px; }
     .team__interface {
       padding-left: 20px;
       padding-right: 20px; }
@@ -1348,6 +1355,8 @@ body {
     background: url(../img/main/bg1200.png) no-repeat 120% center; } }
 
 @media screen and (max-width: 991px) {
+  .scheme__title {
+    max-width: 550px; }
   .team {
     padding-top: 50px;
     padding-bottom: 50px; }
@@ -1356,7 +1365,8 @@ body {
     .team__window--medium {
       display: none; }
     .team__title {
-      margin-bottom: 10px; }
+      margin-bottom: 10px;
+      max-width: 550px; }
     .team__text {
       font-size: 18px; }
     .team__interface {
@@ -1583,13 +1593,13 @@ body {
       font-size: 48px;
       margin-bottom: 20px; }
     .scheme__text {
-      margin-bottom: 22px;
       font-size: 16px; }
     .scheme__content {
       transform: translateY(-37.5px); }
     .scheme__logo {
       width: 30px;
-      height: 30px; }
+      height: 30px;
+      bottom: 15px; }
       .scheme__logo img {
         width: 14px; }
     .scheme__card {
