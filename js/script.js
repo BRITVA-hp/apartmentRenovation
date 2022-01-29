@@ -139,6 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     tabs('.works__types__item--desc', '.works__box', 'active');
+    tabs('[data-sumTab]', '[data-sumTabsContent]', 'active');
 
           // Функция слайдера
           function slider(window, field, cards, cardWidth, margin, dotsWrap, dotClass, dotClassActive, arrowPrev, arrowNext, arrowClass, sliderName, sliderSlideName) {
@@ -347,5 +348,105 @@ document.addEventListener('DOMContentLoaded', () => {
             '.team__button--next--small',
             'inactive',
         );
+
+    // slider in sum
+
+    function sliderSum (cards, window, field, prevButton, nextButton, activeClass, inActiveButton, sliderName, slideName) {
+        const _cards = document.querySelectorAll(cards),
+              _window = document.querySelector(window),
+              _field = document.querySelector(field),
+              _prevButton = document.querySelector(prevButton),
+              _nextButton = document.querySelector(nextButton),
+              _sliderName = document.querySelector(sliderName),
+              _slideName = document.querySelectorAll(slideName);
+
+        let counter = 0,
+            startPoint,
+            swipeAction,
+            endPoint,
+            opacity;
+
+        function slideNameDynamic () {
+            _slideName.forEach((item, index) => {
+                if (index == counter) {
+                    _sliderName.textContent = item.textContent;
+                }
+            });
+        }
+
+        function slideShow(prev = true) {
+            clearActiveClass (_cards, activeClass)
+            prev ? counter-- : counter++;
+            _cards.forEach((item, index) => {
+                if (index === counter) {
+                    item.classList.add(activeClass)
+                }
+            });
+            switch (counter) {
+                case 0:
+                    _prevButton.classList.add(inActiveButton);
+                    break;
+                case _cards.length - 1:
+                    _nextButton.classList.add(inActiveButton);
+                    break;
+            
+                default:
+                    _prevButton.classList.remove(inActiveButton);
+                    _nextButton.classList.remove(inActiveButton);
+                    break;
+            }
+            slideNameDynamic ();
+        }
+
+        _prevButton.addEventListener('click', () => {
+            if (counter === 0) {
+                return
+            } else {
+                slideShow();
+            }
+        });
+        _nextButton.addEventListener('click', () => {
+            if (counter === _cards.length - 1) {
+                return
+            } else {
+                slideShow(false);
+            }
+        });
+
+        _window.addEventListener('touchstart', (e) => {
+            startPoint = e.changedTouches[0].pageX;
+        });
+
+        _window.addEventListener('touchmove', (e) => {
+            swipeAction = e.changedTouches[0].pageX - startPoint;
+            opacity = 1 - Math.abs(swipeAction) * 0.003;
+            _field.style.transform = `translateX(${swipeAction}px)`;
+            _field.style.opacity = `${opacity < 0.7 ? 0.7 : opacity}`;
+            console.log(swipeAction);
+        });
+
+        _window.addEventListener('touchend', (e) => {
+            endPoint = e.changedTouches[0].pageX;
+            _field.style.transform = 'none';
+            _field.style.opacity = '1';
+            if (Math.abs(startPoint - endPoint) > 70) {
+                if (endPoint < startPoint) {
+                    if (counter === _cards.length - 1) {
+                        return
+                    } else {
+                        slideShow(false);
+                    }
+                } else {
+                    if (counter === 0) {
+                        return
+                    } else {
+                        slideShow();
+                    }
+                }
+            }
+        });
+    }
+
+    sliderSum('[data-sumSlide]', '[data-sumWindow]', '[data-sumField]', '[data-sumPrev]', '[data-sumNext]', 'active', 'inActive', '[data-sumSliderName]', '[data-sumSlideName]');
 
 });

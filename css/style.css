@@ -1265,6 +1265,158 @@ body {
     bottom: 35px;
     transform: translate(-50%); }
 
+.sum {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background-color: #ffffff; }
+  .sum__slide-name {
+    display: none; }
+  .sum__field {
+    transition: 0.3s; }
+    .sum__field .active {
+      display: flex; }
+  .sum__window {
+    overflow: hidden;
+    display: none; }
+  .sum__buttons {
+    display: none; }
+    .sum__buttons .inActive {
+      background-color: transparent; }
+  .sum__button {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #E0E0E0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #E0E0E0; }
+    .sum__button--prev {
+      margin-right: 10px; }
+  .sum__footer {
+    width: 100%; }
+    .sum__footer__price {
+      font-family: 'Montserrat', sans-serif;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 40px;
+      color: #0260E8; }
+    .sum__footer__text {
+      font-family: 'Montserrat', sans-serif;
+      margin-bottom: 5px; }
+      .sum__footer__text span {
+        -webkit-text-decoration-line: line-through;
+        text-decoration-line: line-through; }
+    .sum__footer__button {
+      width: 365px; }
+    .sum__footer__row {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between; }
+    .sum__footer__title {
+      font-family: 'Montserrat', sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 1;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #E0E0E0;
+      margin-bottom: 30px; }
+  .sum__text-block {
+    margin-bottom: 20px; }
+    .sum__text-block__title {
+      font-family: 'Montserrat', sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      -webkit-text-decoration-line: underline;
+      text-decoration-line: underline;
+      margin-bottom: 7px; }
+    .sum__text-block__ul {
+      padding-left: 25px; }
+    .sum__text-block__text {
+      margin-bottom: 5px; }
+  .sum__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 770px; }
+    .sum__content__block {
+      max-height: 500px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap; }
+    .sum__content__title {
+      font-family: 'Montserrat', sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 25px;
+      color: #0260E8;
+      margin-bottom: 30px; }
+  .sum__gift {
+    width: 100%;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url(../img/sum/gift.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    padding: 0px 20px 0px 120px;
+    border: 1px solid #FFDB48;
+    border-radius: 5px;
+    background-color: #FAFAFA; }
+    .sum__gift__title {
+      font-family: 'Montserrat', sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      -webkit-text-decoration-line: underline;
+      text-decoration-line: underline;
+      color: #0260E8;
+      margin-bottom: 20px; }
+    .sum__gift__li {
+      font-family: 'Montserrat', sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px; }
+    .sum__gift__ul {
+      padding-left: 25px; }
+  .sum__box {
+    margin-right: 20px; }
+  .sum__img {
+    margin-bottom: 20px; }
+    .sum__img--min {
+      display: none; }
+  .sum__tabs {
+    margin-bottom: 85px; }
+    .sum__tabs .active {
+      background-color: #FFDB48;
+      border-color: #FFDB48; }
+    .sum__tabs__item {
+      width: 100%;
+      margin-right: 20px;
+      border: 1px solid #E0E0E0;
+      border-radius: 5px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer; }
+      .sum__tabs__item--mob {
+        display: none; }
+  .sum__title {
+    margin-bottom: 30px; }
+  .sum__row {
+    display: none;
+    -webkit-animation-name: blink;
+    animation-name: blink;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s; }
+  .sum__wrap .active {
+    display: flex; }
+
 .modal {
   visibility: hidden;
   opacity: 0;
@@ -1304,6 +1456,27 @@ body {
     .team__buttons--medium {
       display: flex; } }
 
+@media screen and (max-width: 1500px) {
+  .sum__footer__button {
+    width: 100%;
+    max-width: 300px; }
+  .sum__footer__title {
+    font-size: 20px;
+    margin-bottom: 20px; }
+  .sum__footer__text {
+    font-size: 16px; }
+  .sum__footer__price {
+    font-size: 35px; }
+  .sum__text-block__ul {
+    font-size: 16px; }
+  .sum__text-block__title {
+    font-size: 18px; }
+  .sum__content {
+    max-width: 620px; }
+    .sum__content__title {
+      font-size: 20px;
+      margin-bottom: 20px; } }
+
 @media screen and (max-width: 1400px) {
   .quiz__question__box {
     padding-right: 60px; }
@@ -1319,6 +1492,30 @@ body {
     background-position-x: 135%; } }
 
 @media screen and (max-width: 1200px) {
+  .sum {
+    padding-top: 50px;
+    padding-bottom: 50px; }
+    .sum__tabs {
+      margin-bottom: 40px; }
+    .sum__box {
+      margin-right: 0;
+      margin-bottom: 20px; }
+    .sum__row {
+      flex-direction: column;
+      align-items: center; }
+    .sum__gift {
+      height: 110px;
+      background-image: url(../img/sum/giftM.png);
+      padding: 0px 0px 0px 76px; }
+      .sum__gift__title {
+        font-size: 16px;
+        margin-bottom: 5px; }
+      .sum__gift__ul {
+        padding-left: 20px; }
+      .sum__gift__li {
+        font-family: 'Roboto', sans-serif;
+        font-weight: normal;
+        font-size: 14px; }
   .quiz__last {
     padding: 85px 20px;
     background-position: -200px center; }
@@ -1355,6 +1552,11 @@ body {
     background: url(../img/main/bg1200.png) no-repeat 120% center; } }
 
 @media screen and (max-width: 991px) {
+  .sum__title {
+    margin-bottom: 20px; }
+  .sum__tabs__item {
+    font-size: 16px;
+    height: 55px; }
   .scheme__title {
     max-width: 550px; }
   .team {
@@ -1582,6 +1784,32 @@ body {
     font-size: 23px; } }
 
 @media screen and (max-width: 767px) {
+  .sum__container {
+    max-width: 622px; }
+  .sum__window {
+    display: block; }
+  .sum__footer__button {
+    max-width: none; }
+  .sum__footer__block {
+    margin-bottom: 20px; }
+  .sum__footer__row {
+    flex-direction: column;
+    align-items: flex-start; }
+  .sum__content__block {
+    max-height: none; }
+  .sum__img--min {
+    display: block; }
+  .sum__wrap {
+    display: none; }
+  .sum__buttons {
+    display: flex; }
+  .sum__tabs__item {
+    font-size: 14px;
+    max-width: 155px;
+    margin-right: 0;
+    display: none; }
+    .sum__tabs__item--mob {
+      display: flex; }
   .scheme {
     padding-top: 50px;
     padding-bottom: 14px; }

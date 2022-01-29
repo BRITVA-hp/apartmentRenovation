@@ -20,7 +20,32 @@
             &--medium
                 display: flex
 
+@media screen and ( max-width: 1500px )
+    .sum
+        &__footer
+            &__button
+                width: 100%
+                max-width: 300px
+            &__title
+                font-size: 20px
+                margin-bottom: 20px
+            &__text
+                font-size: 16px
+            &__price
+                font-size: 35px
+        &__text-block
+            &__ul
+                font-size: 16px
+            &__title
+                font-size: 18px
+        &__content
+            max-width: 620px
+            &__title
+                font-size: 20px
+                margin-bottom: 20px
+
 @media screen and ( max-width: 1400px )
+
     .quiz
         &__question
             &__box
@@ -43,6 +68,30 @@
             background-position-x: 135%
 
 @media screen and ( max-width: 1200px )
+    .sum
+        padding-top: 50px
+        padding-bottom: 50px
+        &__tabs
+            margin-bottom: 40px
+        &__box
+            margin-right: 0
+            margin-bottom: 20px
+        &__row
+            flex-direction: column
+            align-items: center
+        &__gift
+            height: 110px
+            background-image: url(../img/sum/giftM.png)
+            padding: 0px 0px 0px 76px
+            &__title
+                font-size: 16px
+                margin-bottom: 5px
+            &__ul
+                padding-left: 20px
+            &__li
+                font-family: 'Roboto', sans-serif
+                font-weight: normal
+                font-size: 14px
 
     .quiz
         &__last
@@ -88,6 +137,14 @@
             background: url(../img/main/bg1200.png) no-repeat 120% center
 
 @media screen and ( max-width: 991px )
+    .sum
+        &__title
+            margin-bottom: 20px
+        &__tabs
+            &__item
+                font-size: 16px
+                height: 55px
+
     .scheme
         &__title
             max-width: 550px
@@ -331,6 +388,39 @@
             font-size: 23px
 
 @media screen and ( max-width: 767px )
+    .sum
+        &__container
+            max-width: 622px
+        &__window
+            display: block
+        &__footer
+            &__button
+                max-width: none
+            &__block
+                margin-bottom: 20px
+            &__row
+                flex-direction: column
+                align-items: flex-start
+        &__content
+            &__block
+                max-height: none
+        &__img
+            &--min
+                display: block
+        &__wrap
+            display: none
+        &__buttons
+            display: flex
+        &__tabs
+            &__item
+                font-size: 14px
+                max-width: 155px
+                margin-right: 0
+                display: none
+                &--mob
+                    display: flex
+
+
     .scheme
         padding-top: 50px
         padding-bottom: 14px

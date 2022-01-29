@@ -1,0 +1,147 @@
+.sum
+    padding-top: 120px
+    padding-bottom: 120px
+    background-color: #ffffff
+    &__slide-name
+        display: none
+    &__field
+        transition: 0.3s
+        .active
+            display: flex
+    &__window
+        overflow: hidden
+        display: none
+    &__buttons
+        display: none
+        .inActive
+            background-color: transparent
+    &__button
+        width: 50px
+        height: 50px
+        border: 1px solid #E0E0E0
+        display: flex
+        align-items: center
+        justify-content: center
+        background-color: #E0E0E0
+        &--prev
+            margin-right: 10px
+    &__footer
+        width: 100%
+        &__price
+            font-family: 'Montserrat', sans-serif
+            font-style: normal
+            font-weight: 800
+            font-size: 40px
+            color: #0260E8
+        &__text
+            font-family: 'Montserrat', sans-serif
+            margin-bottom: 5px
+            span
+                text-decoration-line: line-through
+        &__button
+            width: 365px
+        &__row
+            display: flex
+            align-items: flex-end
+            justify-content: space-between
+        &__title
+            font-family: 'Montserrat', sans-serif
+            font-style: normal
+            font-weight: bold
+            font-size: 24px
+            line-height: 1
+            padding-bottom: 10px
+            border-bottom: 1px solid #E0E0E0
+            margin-bottom: 30px
+    &__text-block
+        margin-bottom: 20px
+        &__title
+            font-family: 'Montserrat', sans-serif
+            font-style: normal
+            font-weight: 600
+            font-size: 20px
+            text-decoration-line: underline
+            margin-bottom: 7px
+        &__ul
+            padding-left: 25px
+        &__text
+            margin-bottom: 5px
+    &__content
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        width: 100%
+        max-width: 770px
+        &__block
+            max-height: 500px
+            display: flex
+            flex-direction: column
+            flex-wrap: wrap
+        &__title
+            font-family: 'Montserrat', sans-serif
+            font-style: normal
+            font-weight: bold
+            font-size: 25px
+            color: #0260E8
+            margin-bottom: 30px
+    &__gift
+        width: 100%
+        height: 170px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        background-image: url(../img/sum/gift.png)
+        background-repeat: no-repeat
+        background-position: left center
+        background-size: contain
+        padding: 0px 20px 0px 120px
+        border: 1px solid #FFDB48
+        border-radius: 5px
+        background-color: #FAFAFA
+        &__title
+            font-family: 'Montserrat', sans-serif
+            font-style: normal
+            font-weight: bold
+            font-size: 20px
+            text-decoration-line: underline
+            color: #0260E8
+            margin-bottom: 20px
+        &__li
+            font-family: 'Montserrat', sans-serif
+            font-style: normal
+            font-weight: 600
+            font-size: 20px
+        &__ul
+            padding-left: 25px
+    &__box
+        margin-right: 20px
+    &__img
+        margin-bottom: 20px
+        &--min
+            display: none
+    &__tabs
+        margin-bottom: 85px
+        .active
+            background-color: #FFDB48
+            border-color: #FFDB48
+        &__item
+            width: 100%
+            margin-right: 20px
+            border: 1px solid #E0E0E0
+            border-radius: 5px
+            height: 60px
+            display: flex
+            align-items: center
+            justify-content: center
+            cursor: pointer
+            &--mob
+                display: none
+    &__title
+        margin-bottom: 30px
+    &__row
+        display: none
+        animation-name: blink
+        animation-duration: 0.5s
+    &__wrap
+        .active
+            display: flex
