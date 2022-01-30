@@ -45,6 +45,10 @@
                 margin-bottom: 20px
 
 @media screen and ( max-width: 1400px )
+    .last
+        &__img
+            width: 480px
+            right: 0
 
     .quiz
         &__question
@@ -67,7 +71,31 @@
         &__container
             background-position-x: 135%
 
+@media screen and ( max-width: 1300px )
+    .modal
+        &-main
+            &__dialog
+                background-position: 20px center
+
+    .last
+        &__img
+            width: 400px
+            top: 50%
+            transform: translateY(-50%)
+
 @media screen and ( max-width: 1200px )
+    .modal
+        &-main
+            &__dialog
+                background-size: 250px
+
+    .last
+        &__img
+            display: none
+        &__container
+            background: url(../img/last/bg1200.png) no-repeat 95% center
+            padding-left: 40px
+
     .sum
         padding-top: 50px
         padding-bottom: 50px
@@ -136,7 +164,86 @@
             padding-bottom: 40px
             background: url(../img/main/bg1200.png) no-repeat 120% center
 
+@media screen and ( max-width: 1100px )
+    .last
+        &__container
+            background-position: right center
+
 @media screen and ( max-width: 991px )
+    .modal
+        &-success
+            &__bg
+                display: none
+            &__title
+                font-size: 22px
+                margin-bottom: 20px
+            &__close
+                width: 20px
+                top: 20px
+                right: 20px
+            &__dialog
+                background-image: url(../img/modal/bgSuccessM.png)
+                background-position: left bottom
+                max-width: 375px
+                padding: 65px 20px 265px 20px
+        &-main
+            &__close
+                width: 20px
+            &__footer
+                font-size: 12px
+            &__input
+                padding: 18px 20px
+                font-size: 16px
+            &__title
+                font-size: 20px
+                margin-bottom: 18px
+            &__text
+                font-size: 16px
+                margin-bottom: 20px
+            &__row
+                flex-wrap: wrap
+                margin-bottom: 10px
+            &__input-group
+                margin-right: 0
+                margin-bottom: 10px
+            &__close
+                top: 20px
+                right: 20px
+            &__box
+                margin: auto
+            &__dialog
+                background-image: none
+                padding: 40px 20px
+                max-width: 600px
+
+    .last
+        padding-top: 35px
+        padding-bottom: 35px
+        &__button
+            margin-bottom: 15px
+        &__row
+            margin-bottom: 15px
+        &__input-group
+            margin-right: 10px
+        &__input
+            padding: 18px 20px
+            font-size: 16px
+        &__img
+            &--mob
+                display: block
+                margin: auto
+                margin-bottom: 30px
+        &__container
+            padding: 50px 20px
+            background-image: none
+        &__box
+            margin: auto
+        &__title
+            margin-bottom: 20px
+        &__text
+            font-size: 16px
+            margin-bottom: 20px
+
     .sum
         &__title
             margin-bottom: 20px
@@ -388,9 +495,35 @@
             font-size: 23px
 
 @media screen and ( max-width: 767px )
-    .sum
+    .footer
+        padding-top: 6px
+        padding-bottom: 6px
+        &__title
+            font-size: 18px
+            margin-bottom: 0
+        &__text
+            font-size: 14px
+
+    .last
         &__container
+            max-width: 400px
+        &__row
+            flex-wrap: wrap
+        &__input-group
+            margin-right: 0
+            margin-bottom: 10px
+
+    .sum
+        padding-left: 0
+        padding-right: 0
+        &__title
+            padding-left: 20px
+            padding-right: 20px
+        &__field
+            padding-left: 20px
+            padding-right: 20px
             max-width: 622px
+            margin: auto
         &__window
             display: block
         &__footer
@@ -412,6 +545,8 @@
         &__buttons
             display: flex
         &__tabs
+            padding-left: 20px
+            padding-right: 20px
             &__item
                 font-size: 14px
                 max-width: 155px
@@ -566,6 +701,14 @@
             background: url(../img/main/bgM.png) no-repeat right bottom
 
 @media screen and ( max-width: 575px )
+    .modal
+        padding-left: 0
+        padding-right: 0
+
+    .last
+        padding-left: 0
+        padding-right: 0
+
     .scheme
         padding-bottom: 50px
         &__title

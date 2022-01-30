@@ -1417,6 +1417,78 @@ body {
   .sum__wrap .active {
     display: flex; }
 
+.last {
+  background: radial-gradient(50% 50% at 50% 100%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #FAFAFA;
+  padding-top: 90px;
+  padding-bottom: 90px; }
+  .last__img {
+    position: absolute;
+    top: 25px;
+    right: -35px;
+    z-index: 0; }
+    .last__img--mob {
+      display: none; }
+  .last__container {
+    max-width: 1265px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 16px 80px rgba(0, 0, 0, 0.07), 0px 6.68442px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 3.57381px 17.869px rgba(0, 0, 0, 0.0417275), 0px 2.00345px 10.0172px rgba(0, 0, 0, 0.035), 0px 1.06402px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 0.44276px 2.21381px rgba(0, 0, 0, 0.0196802);
+    border-radius: 10px;
+    padding: 52px 20px 64px 108px;
+    position: relative; }
+  .last__box {
+    max-width: 640px;
+    position: relative;
+    z-index: 1; }
+  .last__title {
+    margin-bottom: 32px; }
+  .last__text {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    margin-bottom: 30px; }
+  .last__row {
+    margin-bottom: 20px; }
+  .last__input-group {
+    width: 100%;
+    margin-right: 20px; }
+    .last__input-group:last-child {
+      margin-right: 0;
+      margin-bottom: 0; }
+  .last__input {
+    border: 1px solid #b1b1b1;
+    border-radius: 5px;
+    padding: 20px 30px;
+    color: #c4c4c4;
+    width: 100%; }
+    .last__input:focus {
+      outline: none; }
+  .last__button {
+    width: 100%;
+    margin-bottom: 10px; }
+  .last__footer {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    text-align: center; }
+
+.footer {
+  text-align: center;
+  background-color: #E0E0E0;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+  .footer__title {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 23px;
+    margin-bottom: 10px; }
+  .footer__text {
+    -webkit-text-decoration-line: underline;
+    text-decoration-line: underline; }
+
 .modal {
   visibility: hidden;
   opacity: 0;
@@ -1426,15 +1498,92 @@ body {
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.7);
-  padding: 40px 0;
+  padding: 40px 20px;
   transition: 0.3s;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  overflow: auto; }
+  overflow: auto;
+  z-index: 199; }
   .modal--active {
     visibility: visible;
     opacity: 1; }
+  .modal-success__bg {
+    position: absolute;
+    bottom: 0;
+    left: 65px; }
+  .modal-success__dialog {
+    box-shadow: 0px 16px 80px rgba(0, 0, 0, 0.07), 0px 6.68442px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 3.57381px 17.869px rgba(0, 0, 0, 0.0417275), 0px 2.00345px 10.0172px rgba(0, 0, 0, 0.035), 0px 1.06402px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 0.44276px 2.21381px rgba(0, 0, 0, 0.0196802);
+    border-radius: 5px;
+    background: #FFFFFF url(../img/modal/bgSuccess2.png) no-repeat right bottom;
+    width: 100%;
+    max-width: 1260px;
+    padding: 194px 20px;
+    text-align: center;
+    position: relative; }
+  .modal-success__close {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    cursor: pointer; }
+  .modal-success__title {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 35px;
+    color: #0260E8;
+    margin-bottom: 30px; }
+  .modal-main {
+    text-align: center; }
+    .modal-main__footer {
+      font-family: 'Montserrat', sans-serif;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 14px; }
+    .modal-main__row {
+      margin-bottom: 30px; }
+    .modal-main__button {
+      width: 100%;
+      margin-bottom: 10px; }
+    .modal-main__input-group {
+      width: 100%;
+      margin-right: 20px; }
+      .modal-main__input-group:last-child {
+        margin-right: 0;
+        margin-bottom: 0; }
+    .modal-main__input {
+      width: 100%;
+      border: 1px solid #E0E0E0;
+      border-radius: 5px;
+      color: #a1a1a1;
+      padding: 20px 25px; }
+      .modal-main__input:focus {
+        outline: none; }
+    .modal-main__title {
+      font-family: 'Montserrat', sans-serif;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 25px;
+      color: #0260E8;
+      margin-bottom: 25px; }
+    .modal-main__text {
+      margin-bottom: 30px; }
+    .modal-main__dialog {
+      box-shadow: 0px 16px 80px rgba(0, 0, 0, 0.07), 0px 6.68442px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 3.57381px 17.869px rgba(0, 0, 0, 0.0417275), 0px 2.00345px 10.0172px rgba(0, 0, 0, 0.035), 0px 1.06402px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 0.44276px 2.21381px rgba(0, 0, 0, 0.0196802);
+      border-radius: 5px;
+      width: 100%;
+      max-width: 1260px;
+      background: #FFFFFF url(../img/modal/bgMain.png) no-repeat 70px center;
+      padding: 85px 130px 85px 20px;
+      position: relative; }
+    .modal-main__close {
+      position: absolute;
+      right: 40px;
+      top: 40px;
+      cursor: pointer; }
+    .modal-main__box {
+      max-width: 620px;
+      margin-left: auto; }
 
 @media screen and (max-width: 1600px) {
   .team {
@@ -1478,6 +1627,9 @@ body {
       margin-bottom: 20px; } }
 
 @media screen and (max-width: 1400px) {
+  .last__img {
+    width: 480px;
+    right: 0; }
   .quiz__question__box {
     padding-right: 60px; }
   .quiz__container {
@@ -1491,7 +1643,22 @@ body {
   .main__container {
     background-position-x: 135%; } }
 
+@media screen and (max-width: 1300px) {
+  .modal-main__dialog {
+    background-position: 20px center; }
+  .last__img {
+    width: 400px;
+    top: 50%;
+    transform: translateY(-50%); } }
+
 @media screen and (max-width: 1200px) {
+  .modal-main__dialog {
+    background-size: 250px; }
+  .last__img {
+    display: none; }
+  .last__container {
+    background: url(../img/last/bg1200.png) no-repeat 95% center;
+    padding-left: 40px; }
   .sum {
     padding-top: 50px;
     padding-bottom: 50px; }
@@ -1551,7 +1718,79 @@ body {
     padding-bottom: 40px;
     background: url(../img/main/bg1200.png) no-repeat 120% center; } }
 
+@media screen and (max-width: 1100px) {
+  .last__container {
+    background-position: right center; } }
+
 @media screen and (max-width: 991px) {
+  .modal-success__bg {
+    display: none; }
+  .modal-success__title {
+    font-size: 22px;
+    margin-bottom: 20px; }
+  .modal-success__close {
+    width: 20px;
+    top: 20px;
+    right: 20px; }
+  .modal-success__dialog {
+    background-image: url(../img/modal/bgSuccessM.png);
+    background-position: left bottom;
+    max-width: 375px;
+    padding: 65px 20px 265px 20px; }
+  .modal-main__close {
+    width: 20px; }
+  .modal-main__footer {
+    font-size: 12px; }
+  .modal-main__input {
+    padding: 18px 20px;
+    font-size: 16px; }
+  .modal-main__title {
+    font-size: 20px;
+    margin-bottom: 18px; }
+  .modal-main__text {
+    font-size: 16px;
+    margin-bottom: 20px; }
+  .modal-main__row {
+    flex-wrap: wrap;
+    margin-bottom: 10px; }
+  .modal-main__input-group {
+    margin-right: 0;
+    margin-bottom: 10px; }
+  .modal-main__close {
+    top: 20px;
+    right: 20px; }
+  .modal-main__box {
+    margin: auto; }
+  .modal-main__dialog {
+    background-image: none;
+    padding: 40px 20px;
+    max-width: 600px; }
+  .last {
+    padding-top: 35px;
+    padding-bottom: 35px; }
+    .last__button {
+      margin-bottom: 15px; }
+    .last__row {
+      margin-bottom: 15px; }
+    .last__input-group {
+      margin-right: 10px; }
+    .last__input {
+      padding: 18px 20px;
+      font-size: 16px; }
+    .last__img--mob {
+      display: block;
+      margin: auto;
+      margin-bottom: 30px; }
+    .last__container {
+      padding: 50px 20px;
+      background-image: none; }
+    .last__box {
+      margin: auto; }
+    .last__title {
+      margin-bottom: 20px; }
+    .last__text {
+      font-size: 16px;
+      margin-bottom: 20px; }
   .sum__title {
     margin-bottom: 20px; }
   .sum__tabs__item {
@@ -1784,32 +2023,59 @@ body {
     font-size: 23px; } }
 
 @media screen and (max-width: 767px) {
-  .sum__container {
-    max-width: 622px; }
-  .sum__window {
-    display: block; }
-  .sum__footer__button {
-    max-width: none; }
-  .sum__footer__block {
-    margin-bottom: 20px; }
-  .sum__footer__row {
-    flex-direction: column;
-    align-items: flex-start; }
-  .sum__content__block {
-    max-height: none; }
-  .sum__img--min {
-    display: block; }
-  .sum__wrap {
-    display: none; }
-  .sum__buttons {
-    display: flex; }
-  .sum__tabs__item {
-    font-size: 14px;
-    max-width: 155px;
+  .footer {
+    padding-top: 6px;
+    padding-bottom: 6px; }
+    .footer__title {
+      font-size: 18px;
+      margin-bottom: 0; }
+    .footer__text {
+      font-size: 14px; }
+  .last__container {
+    max-width: 400px; }
+  .last__row {
+    flex-wrap: wrap; }
+  .last__input-group {
     margin-right: 0;
-    display: none; }
-    .sum__tabs__item--mob {
+    margin-bottom: 10px; }
+  .sum {
+    padding-left: 0;
+    padding-right: 0; }
+    .sum__title {
+      padding-left: 20px;
+      padding-right: 20px; }
+    .sum__field {
+      padding-left: 20px;
+      padding-right: 20px;
+      max-width: 622px;
+      margin: auto; }
+    .sum__window {
+      display: block; }
+    .sum__footer__button {
+      max-width: none; }
+    .sum__footer__block {
+      margin-bottom: 20px; }
+    .sum__footer__row {
+      flex-direction: column;
+      align-items: flex-start; }
+    .sum__content__block {
+      max-height: none; }
+    .sum__img--min {
+      display: block; }
+    .sum__wrap {
+      display: none; }
+    .sum__buttons {
       display: flex; }
+    .sum__tabs {
+      padding-left: 20px;
+      padding-right: 20px; }
+      .sum__tabs__item {
+        font-size: 14px;
+        max-width: 155px;
+        margin-right: 0;
+        display: none; }
+        .sum__tabs__item--mob {
+          display: flex; }
   .scheme {
     padding-top: 50px;
     padding-bottom: 14px; }
@@ -1949,6 +2215,12 @@ body {
       background: url(../img/main/bgM.png) no-repeat right bottom; } }
 
 @media screen and (max-width: 575px) {
+  .modal {
+    padding-left: 0;
+    padding-right: 0; }
+  .last {
+    padding-left: 0;
+    padding-right: 0; }
   .scheme {
     padding-bottom: 50px; }
     .scheme__title {

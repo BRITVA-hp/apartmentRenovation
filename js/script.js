@@ -421,8 +421,7 @@ document.addEventListener('DOMContentLoaded', () => {
             swipeAction = e.changedTouches[0].pageX - startPoint;
             opacity = 1 - Math.abs(swipeAction) * 0.003;
             _field.style.transform = `translateX(${swipeAction}px)`;
-            _field.style.opacity = `${opacity < 0.7 ? 0.7 : opacity}`;
-            console.log(swipeAction);
+            _field.style.opacity = `${opacity < 0.65 ? 0.65 : opacity}`;
         });
 
         _window.addEventListener('touchend', (e) => {
