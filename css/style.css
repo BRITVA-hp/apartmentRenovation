@@ -388,7 +388,9 @@ body {
   color: #ffffff;
   background-color: #41B619;
   border-radius: 5px;
-  border: 1px solid #41B619; }
+  border: 1px solid #41B619;
+  text-decoration: none;
+  text-align: center; }
   .button:focus {
     outline: none; }
   .button:hover {
@@ -491,7 +493,16 @@ body {
     width: 365px; }
   .main__footer {
     padding: 5px 20px;
-    background-color: #E0E0E0; }
+    background-color: #E0E0E0;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    transition: 0.3s; }
+    .main__footer--inActive {
+      opacity: 0;
+      visibility: hidden; }
     .main__footer__container {
       max-width: 1025px;
       margin: auto; }
@@ -572,6 +583,7 @@ body {
         z-index: 1; }
 
 .price {
+  padding-top: 90px;
   padding-bottom: 90px;
   background-color: #FAFAFA; }
   .price__container {

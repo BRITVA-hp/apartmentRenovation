@@ -448,4 +448,109 @@ document.addEventListener('DOMContentLoaded', () => {
 
     sliderSum('[data-sumSlide]', '[data-sumWindow]', '[data-sumField]', '[data-sumPrev]', '[data-sumNext]', 'active', 'inActive', '[data-sumSliderName]', '[data-sumSlideName]');
 
+    
+    // функция для модалки
+
+    function calcScroll() {
+        let div = document.createElement('div');
+        
+        div.style.width = '50px';
+        div.style.height = '50px';
+        div.style.overflowY = 'scroll';
+        div.style.visibility = 'hidden';
+        
+        document.body.appendChild(div);
+        let scarollWidth = div.offsetWidth - div.clientWidth;
+        div.remove();
+        
+        return scarollWidth;
+    }
+
+    let scrollWidth = calcScroll();
+
+    function modal(modal, modalActiveClass, triggers, modalClose) {
+        const triggers_ = document.querySelectorAll(triggers),
+                modal_ = document.querySelector(modal),
+                modalClose_ = document.querySelector(modalClose);
+
+        if (triggers_.length > 0) {
+            triggers_.forEach(item => {
+                item.addEventListener('click', () => {
+                    modal_.classList.add(modalActiveClass);
+                    document.body.style.overflow = 'hidden';
+                    document.body.style.marginRight = `${scrollWidth}px`;
+                });
+            });
+
+            modalClose_.addEventListener('click', () => {
+                modal_.classList.remove(modalActiveClass);
+                document.body.style.overflow = '';
+                document.body.style.marginRight = '0px';
+            });
+    
+            modal_.addEventListener('click', (e) => {
+                if (e.target.classList.contains(modal.replace(/\./, ''))) {
+                    modal_.classList.remove(modalActiveClass);
+                    document.body.style.overflow = '';
+                    document.body.style.marginRight = '0px';
+                }
+            });
+        }
+    }
+
+    modal('.modal-main', 'modal--active', '[data-modal]', '.modal-main__close');
+
+      //Scrolling with raf
+
+    let links = document.querySelectorAll('[href^="#"]'),
+    speed = 0.25;
+
+    links.forEach(link => {
+    link.addEventListener('click', function(event) {
+    event.preventDefault();
+
+    let widthTop = document.documentElement.scrollTop,
+        hash = this.hash,
+        toBlock =document.querySelector(hash).getBoundingClientRect().top,
+        start = null;
+
+    requestAnimationFrame(step);
+
+    function step(time) {
+        if (start === null) {
+        start = time;
+        }
+
+        let progress = time - start,
+            r = (toBlock < 0 ? Math.max(widthTop - progress/speed, widthTop + toBlock) : Math.min(widthTop + progress/speed, widthTop + toBlock));
+
+        document.documentElement.scrollTo(0, r);
+        if (r != widthTop + toBlock) {
+        requestAnimationFrame(step);
+        } else {
+        location.hash = hash;
+        }
+    }
+    });
+    });
+
+    // Видно или нет полоску
+
+    function stringVision (string, quiz, footer, inActiveClass) {
+        const _string = document.querySelector(string),
+              _quiz = document.querySelector(quiz),
+              _footer = document.querySelector(footer);
+
+        document.addEventListener('scroll', () => {
+            if (_quiz.getBoundingClientRect().top <= 500 && _quiz.getBoundingClientRect().top > -400 || _footer.getBoundingClientRect().top - document.documentElement.clientHeight <= 0) {
+                _string.classList.add(inActiveClass);
+            } else {
+                _string.classList.remove(inActiveClass);
+            }
+        });
+
+    }
+
+    stringVision('.main__footer', '.quiz', '.footer', 'main__footer--inActive');
+
 });
